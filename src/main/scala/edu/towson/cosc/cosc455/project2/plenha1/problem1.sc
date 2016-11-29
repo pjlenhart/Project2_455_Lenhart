@@ -73,7 +73,7 @@ def buildTwins(primeList : List[Int]) : List[Int] ={
 def twinsList(num : Int) : List[Int] = {
   case 3 => Nil
   case _ =>{
-    if(twinPrimes(num, num-2))
+    if(prime(num) && prime(num-2))
       num::num-2::twinsList(num-2)
     else
       twinsList(num-1)
@@ -107,3 +107,6 @@ def assisstGoldbach(x : Int, y : Int): Unit = {
 
 //goldbach test case
 goldbach(28) //should output "23 + 5 = 28"
+
+//For whatever reason, Goldbach wont run in this Worksheet but I ran it
+//on an online compiler it was successful
